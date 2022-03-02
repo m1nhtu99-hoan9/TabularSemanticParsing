@@ -1,3 +1,19 @@
+# Data files
+data/*
+!data/**/scripts/*
+neuralsp/wombat/data/
+
+# Misc
+*.pkl
+*.pdf
+*.zip
+.nfs*
+*.swp
+temp.txt
+*.iml
+.idea
+.DS_Store
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -102,17 +118,3 @@ ENV/
 
 # Java
 *.class
-
-# Data files
-data/
-neuralsp/wombat/data/
-
-# Misc
-*.pkl
-*.pdf
-.nfs*
-*.swp
-temp.txt
-*.iml
-.idea
-.DS_Store
