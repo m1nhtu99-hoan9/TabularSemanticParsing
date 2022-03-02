@@ -45,9 +45,11 @@ export PYTHONPATH=`pwd` && python -m nltk.downloader punkt
 
 #### Spider
 
-Download the [official data release](https://drive.google.com/u/1/uc?export=download&confirm=pft3&id=1_AckYkinAnhqmRQtGsQgUKAnTHxxX5J0) and unzip the folder. Manually merge `spider/train_spider.json` with `spider/train_others.json` into a single file `spider/train.json`.
-```
-mv spider data/ 
+```bash
+python3 data/spider/scripts/download_spider.py
+mv ./data/spider/spider/* ./data/spider && rm -rf ./data/spider/spider
+
+python3 data/spider/scripts/merge_train_json_files.py
 
 # Data Repair (more details in section 4.3 of paper)
 python3 data/spider/scripts/amend_missing_foreign_keys.py data/spider
